@@ -2294,155 +2294,120 @@ footer {
              CONTACT FORM
         ================================================== -->
 
-        <form
-          id="contactForm"
-          action="send-mail.php"
-          method="POST"
-          novalidate
-        >
+       ```html
+<form id="contactForm">
 
-          <div class="field-row">
+  <div class="field-row">
 
-            <div class="field">
+    <div class="field">
+      <label for="fname">Full name</label>
+      <input
+        id="fname"
+        name="name"
+        type="text"
+        autocomplete="name"
+        required
+      >
+    </div>
 
-              <label for="fname">
-                Full name
-              </label>
+    <div class="field">
+      <label for="fcompany">Company</label>
+      <input
+        id="fcompany"
+        name="company"
+        type="text"
+        autocomplete="organization"
+        required
+      >
+    </div>
 
-              <input
-                id="fname"
-                name="name"
-                type="text"
-                autocomplete="name"
-                required
-              >
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="fcompany">
-                Company
-              </label>
-
-              <input
-                id="fcompany"
-                name="company"
-                type="text"
-                autocomplete="organization"
-                required
-              >
-
-            </div>
-
-          </div>
+  </div>
 
 
-          <div class="field-row">
+  <div class="field-row">
 
-            <div class="field">
+    <div class="field">
+      <label for="femail">Work email</label>
+      <input
+        id="femail"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+      >
+    </div>
 
-              <label for="femail">
-                Work email
-              </label>
+    <div class="field">
+      <label for="fphone">Phone / WhatsApp</label>
+      <input
+        id="fphone"
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        inputmode="tel"
+      >
+    </div>
 
-              <input
-                id="femail"
-                name="email"
-                type="email"
-                autocomplete="email"
-                required
-              >
-
-            </div>
-
-
-            <div class="field">
-
-              <label for="fphone">
-                Phone / WhatsApp
-              </label>
-
-              <input
-                id="fphone"
-                name="phone"
-                type="tel"
-                autocomplete="tel"
-                inputmode="tel"
-              >
-
-            </div>
-
-          </div>
+  </div>
 
 
-          <div class="field">
+  <div class="field">
 
-            <label for="fmsg">
-              What are you trying to grow?
-            </label>
+    <label for="fmsg">
+      What are you trying to grow?
+    </label>
 
-            <textarea
-              id="fmsg"
-              name="message"
-              rows="3"
-            ></textarea>
+    <textarea
+      id="fmsg"
+      name="message"
+      rows="3"
+    ></textarea>
 
-          </div>
-
-
-          <!--
-            Hidden honeypot.
-            Normal visitors never see this.
-            Bots often fill it automatically.
-          -->
-
-          <div
-            style="
-              display:none;
-              position:absolute;
-              left:-9999px;
-            "
-            aria-hidden="true"
-          >
-
-            <label for="website">
-              Website
-            </label>
-
-            <input
-              id="website"
-              name="website"
-              type="text"
-              tabindex="-1"
-              autocomplete="off"
-            >
-
-          </div>
+  </div>
 
 
-          <button
-            type="submit"
-            class="btn btn-primary"
-            id="submitButton"
-          >
-            Get Started →
-          </button>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    id="submitButton"
+  >
+    Get Started →
+  </button>
+
+</form>
 
 
-          <p
-            id="formStatus"
-            role="status"
-            aria-live="polite"
-            style="
-              display:none;
-              font-size:13px;
-              margin-top:12px;
-            "
-          ></p>
+<script>
 
-        </form>
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const form = this;
+
+    /*
+     * Check required fields first.
+     * Browser will show its normal validation
+     * if something required is missing.
+     */
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    /*
+     * Reset the form.
+     */
+
+    form.reset();
+
+  });
+
+</script>
+```
 
       </div>
 
