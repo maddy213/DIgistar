@@ -2294,91 +2294,96 @@ footer {
              CONTACT FORM
         ================================================== -->
 
-       ```html
-<form id="contactForm">
+    <form id="contactForm">
 
   <div class="field-row">
 
-    <div class="field">
-      <label for="fname">Full name</label>
-      <input
-        id="fname"
-        name="name"
-        type="text"
-        autocomplete="name"
-        required
-      >
-    </div>
+```
+<div class="field">
+  <label for="fname">Full name</label>
+  <input
+    id="fname"
+    name="name"
+    type="text"
+    autocomplete="name"
+    required
+  >
+</div>
 
-    <div class="field">
-      <label for="fcompany">Company</label>
-      <input
-        id="fcompany"
-        name="company"
-        type="text"
-        autocomplete="organization"
-        required
-      >
-    </div>
+<div class="field">
+  <label for="fcompany">Company</label>
+  <input
+    id="fcompany"
+    name="company"
+    type="text"
+    autocomplete="organization"
+    required
+  >
+</div>
+```
 
   </div>
-
 
   <div class="field-row">
 
-    <div class="field">
-      <label for="femail">Work email</label>
-      <input
-        id="femail"
-        name="email"
-        type="email"
-        autocomplete="email"
-        required
-      >
-    </div>
+```
+<div class="field">
+  <label for="femail">Work email</label>
+  <input
+    id="femail"
+    name="email"
+    type="email"
+    autocomplete="email"
+    required
+  >
+</div>
 
-    <div class="field">
-      <label for="fphone">Phone / WhatsApp</label>
-      <input
-        id="fphone"
-        name="phone"
-        type="tel"
-        autocomplete="tel"
-        inputmode="tel"
-      >
-    </div>
+<div class="field">
+  <label for="fphone">Phone / WhatsApp</label>
+  <input
+    id="fphone"
+    name="phone"
+    type="tel"
+    autocomplete="tel"
+    inputmode="tel"
+  >
+</div>
+```
 
   </div>
-
 
   <div class="field">
 
-    <label for="fmsg">
-      What are you trying to grow?
-    </label>
+```
+<label for="fmsg">
+  What are you trying to grow?
+</label>
 
-    <textarea
-      id="fmsg"
-      name="message"
-      rows="3"
-    ></textarea>
+<textarea
+  id="fmsg"
+  name="message"
+  rows="3"
+></textarea>
+```
 
   </div>
 
+<button
+type="submit"
+class="btn btn-primary"
+id="submitButton"
 
-  <button
-    type="submit"
-    class="btn btn-primary"
-    id="submitButton"
-  >
-    Get Started →
+>
+
+```
+Get Started →
+```
+
   </button>
 
 </form>
 
-
 <script>
-
 document
   .getElementById("contactForm")
   .addEventListener("submit", function(event) {
@@ -2388,26 +2393,24 @@ document
     const form = this;
 
     /*
-     * Check required fields first.
-     * Browser will show its normal validation
-     * if something required is missing.
+     * Let the browser handle required-field validation.
      */
-
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
     }
 
     /*
-     * Reset the form.
+     * Simply clear the form.
+     * No PHP request.
+     * No success message.
+     * No error message.
      */
-
     form.reset();
 
   });
-
 </script>
-```
+
 
       </div>
 
@@ -2521,167 +2524,6 @@ document
 </footer>
 
 
-<!-- =======================================================
-     FORM JAVASCRIPT
-======================================================= -->
-
-<script>
-
-const contactForm =
-  document.getElementById("contactForm");
-
-const submitButton =
-  document.getElementById("submitButton");
-
-const formStatus =
-  document.getElementById("formStatus");
-
-
-contactForm.addEventListener(
-  "submit",
-  async function(event) {
-
-    event.preventDefault();
-
-
-    /*
-     * Browser validation
-     */
-
-    if (!contactForm.checkValidity()) {
-
-      contactForm.reportValidity();
-
-      return;
-    }
-
-
-    /*
-     * Disable button while sending
-     */
-
-    submitButton.disabled = true;
-
-    submitButton.textContent = "Sending...";
-
-    formStatus.style.display = "none";
-
-
-    try {
-
-      const response =
-        await fetch(
-          "send-mail.php",
-          {
-            method: "POST",
-
-            body:
-              new FormData(contactForm),
-
-            headers: {
-              "Accept":
-                "application/json"
-            }
-          }
-        );
-
-
-      /*
-       * Try to read JSON response.
-       */
-
-      let result;
-
-      try {
-
-        result =
-          await response.json();
-
-      } catch (jsonError) {
-
-        throw new Error(
-          "Invalid server response"
-        );
-
-      }
-
-
-      if (
-        response.ok &&
-        result.success
-      ) {
-
-        formStatus.textContent =
-          "Thank you! Your message has been sent. We'll get back to you shortly.";
-
-        formStatus.style.color =
-          "var(--amber)";
-
-        formStatus.style.display =
-          "block";
-
-
-        contactForm.reset();
-
-
-        /*
-         * Keep success message visible.
-         */
-
-        setTimeout(
-          function() {
-
-            formStatus.style.display =
-              "none";
-
-          },
-          8000
-        );
-
-
-      } else {
-
-        throw new Error(
-          result.message ||
-          "Unable to send message."
-        );
-
-      }
-
-
-    } catch (error) {
-
-      console.error(
-        "Contact form error:",
-        error
-      );
-
-
-      formStatus.textContent =
-        "Sorry, something went wrong. Please try again or email contact@digistar.in directly.";
-
-      formStatus.style.color =
-        "#ff7b6b";
-
-      formStatus.style.display =
-        "block";
-
-    }
-
-
-    /*
-     * Re-enable button
-     */
-
-    submitButton.disabled = false;
-
-    submitButton.textContent =
-      "Get Started →";
-
-  }
-);
-
-</script>
 
 
 </body>
