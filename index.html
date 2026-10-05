@@ -50,23 +50,14 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-
   font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
-
   font-size: 16px;
   line-height: 1.6;
-
   -webkit-font-smoothing: antialiased;
-
   overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-.display {
+h1, h2, h3, h4, h5, .display {
   font-family: 'Sora', ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -74,18 +65,14 @@ a {
   color: inherit;
 }
 
-button,
-input,
-textarea {
+button, input, textarea {
   font-family: inherit;
 }
 
 .wrap {
   width: 100%;
   max-width: 1140px;
-
   margin: 0 auto;
-
   padding-left: 28px;
   padding-right: 28px;
 }
@@ -97,77 +84,47 @@ textarea {
 
 header {
   position: sticky;
-
   top: 0;
-
   z-index: 40;
-
   background: rgba(255,250,243,0.90);
-
   backdrop-filter: blur(10px);
-
   -webkit-backdrop-filter: blur(10px);
-
   border-bottom: 1px solid var(--line);
 }
 
 nav {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   gap: 20px;
-
   padding: 16px 28px;
-
   max-width: 1140px;
-
   margin: 0 auto;
 }
 
 .logo {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   font-weight: 800;
-
   font-size: 19px;
-
   letter-spacing: -0.01em;
-
   font-family: 'Sora';
 }
 
 .logo-mark {
   width: 26px;
   height: 26px;
-
   border-radius: 8px;
-
   flex: none;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--coral),
-      var(--violet)
-    );
+  background: linear-gradient(135deg, var(--coral), var(--violet));
 }
 
 .navlinks {
   display: flex;
-
   gap: 32px;
-
   font-size: 14.5px;
-
   color: var(--muted);
-
   font-weight: 500;
 }
 
@@ -181,37 +138,19 @@ nav {
 
 .nav-cta {
   font-size: 14px;
-
   font-weight: 700;
-
   padding: 10px 20px;
-
   color: #fff;
-
   text-decoration: none;
-
   border-radius: 100px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--coral),
-      var(--violet)
-    );
-
+  background: linear-gradient(135deg, var(--coral), var(--violet));
   white-space: nowrap;
-
-  transition:
-    transform .12s ease,
-    box-shadow .15s ease;
+  transition: transform .12s ease, box-shadow .15s ease;
 }
 
 .nav-cta:hover {
   transform: translateY(-1px);
-
-  box-shadow:
-    0 8px 20px
-    rgba(124,58,237,0.25);
+  box-shadow: 0 8px 20px rgba(124,58,237,0.25);
 }
 
 
@@ -221,11 +160,8 @@ nav {
 
 .mesh {
   position: absolute;
-
   inset: 0;
-
   z-index: -1;
-
   overflow: hidden;
 }
 
@@ -233,22 +169,16 @@ nav {
 .mesh::after,
 .mesh .blob {
   content: "";
-
   position: absolute;
-
   border-radius: 50%;
-
   filter: blur(70px);
-
   opacity: 0.55;
 }
 
 .mesh::before {
   width: 520px;
   height: 520px;
-
   background: var(--coral);
-
   top: -160px;
   left: -120px;
 }
@@ -256,24 +186,18 @@ nav {
 .mesh::after {
   width: 460px;
   height: 460px;
-
   background: var(--violet);
-
   top: 40px;
   right: -140px;
-
   opacity: 0.45;
 }
 
 .mesh .blob {
   width: 420px;
   height: 420px;
-
   background: var(--amber);
-
   bottom: -200px;
   left: 30%;
-
   opacity: 0.5;
 }
 
@@ -284,143 +208,88 @@ nav {
 
 .hero {
   position: relative;
-
   padding: 64px 0 48px;
 }
 
 .hero-grid {
   display: grid;
-
-  grid-template-columns:
-    1.1fr
-    0.9fr;
-
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 56px;
-
   align-items: center;
 }
 
 .eyebrow {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
-
   font-size: 13px;
-
   font-weight: 700;
-
   margin-bottom: 22px;
-
   padding: 8px 16px;
-
   border-radius: 100px;
-
   background: var(--card);
-
   border: 1px solid var(--line);
 }
 
 .eyebrow .dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: var(--coral);
-
   flex: none;
 }
 
 h1 {
   font-size: clamp(36px,5.6vw,62px);
-
   font-weight: 800;
-
   line-height: 1.04;
-
   letter-spacing: -0.02em;
-
   margin: 0 0 22px;
-
   text-transform: uppercase;
 }
 
 h1 .grad {
-  background:
-    linear-gradient(
-      135deg,
-      var(--coral),
-      var(--violet)
-    );
-
+  background: linear-gradient(135deg, var(--coral), var(--violet));
   -webkit-background-clip: text;
-
   background-clip: text;
-
   color: transparent;
 }
 
 .hero-sub {
   color: var(--muted);
-
   font-size: 17.5px;
-
   max-width: 48ch;
-
   margin: 0 0 16px;
 }
 
 .hero-note {
   color: var(--ink);
-
   font-size: 15px;
-
   font-style: italic;
-
   max-width: 48ch;
-
   margin: 0 0 32px;
 }
 
 .cta-row {
   display: flex;
-
   gap: 14px;
-
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   gap: 8px;
-
   min-height: 48px;
-
   padding: 14px 26px;
-
   font-size: 14.5px;
-
   font-weight: 700;
-
   border-radius: 100px;
-
   cursor: pointer;
-
   border: 1px solid transparent;
-
   text-decoration: none;
-
-  transition:
-    transform .12s ease,
-    box-shadow .15s ease,
-    opacity .15s ease;
+  transition: transform .12s ease, box-shadow .15s ease, opacity .15s ease;
 }
 
 .btn:active {
@@ -429,29 +298,22 @@ h1 .grad {
 
 .btn:disabled {
   cursor: wait;
-
   opacity: 0.7;
 }
 
 .btn-primary {
   background: var(--ink);
-
   color: #fff;
 }
 
 .btn-primary:hover {
-  box-shadow:
-    0 10px 24px
-    rgba(26,21,35,0.22);
-
+  box-shadow: 0 10px 24px rgba(26,21,35,0.22);
   transform: translateY(-1px);
 }
 
 .btn-ghost {
   border-color: var(--line);
-
   color: var(--ink);
-
   background: var(--card);
 }
 
@@ -466,41 +328,26 @@ h1 .grad {
 
 .hero-card {
   background: var(--card);
-
   border-radius: 24px;
-
   padding: 26px;
-
   border: 1px solid var(--line);
-
-  box-shadow:
-    0 30px 60px -20px
-    rgba(124,58,237,0.25);
+  box-shadow: 0 30px 60px -20px rgba(124,58,237,0.25);
 }
 
 .hero-card .card-head {
   font-size: 12.5px;
-
   font-weight: 700;
-
   color: var(--muted);
-
   margin-bottom: 16px;
 }
 
 .channel {
   display: flex;
-
   align-items: center;
-
   gap: 14px;
-
   padding: 16px 18px;
-
   border-radius: 12px;
-
   color: #fff;
-
   margin-bottom: 10px;
 }
 
@@ -510,25 +357,19 @@ h1 .grad {
 
 .channel .ico {
   font-size: 22px;
-
   flex: none;
 }
 
 .channel strong {
   display: block;
-
   font-family: 'Sora';
-
   font-size: 15.5px;
-
   font-weight: 700;
 }
 
 .channel span {
   display: block;
-
   font-size: 12.5px;
-
   opacity: 0.88;
 }
 
@@ -543,45 +384,31 @@ section {
 
 .section-head {
   max-width: 680px;
-
   margin-bottom: 50px;
 }
 
 .kicker {
   display: inline-block;
-
   font-size: 13px;
-
   font-weight: 700;
-
   margin: 0 0 14px;
-
   color: var(--violet);
-
   text-transform: uppercase;
-
   letter-spacing: 0.06em;
 }
 
 h2 {
   font-size: clamp(26px,3.4vw,36px);
-
   font-weight: 800;
-
   letter-spacing: -0.015em;
-
   margin: 0 0 14px;
-
   line-height: 1.15;
 }
 
 .section-head p {
   color: var(--muted);
-
   font-size: 16px;
-
   max-width: 56ch;
-
   margin: 0;
 }
 
@@ -608,33 +435,23 @@ h2 {
 
 .flow svg {
   display: block;
-
   width: 100%;
-
   height: auto;
-
   overflow: visible;
 }
 
 .flow .track {
   fill: none;
-
   stroke: var(--line);
-
   stroke-width: 3;
 }
 
 .flow .stream {
   fill: none;
-
   stroke: url(#flowGrad);
-
   stroke-width: 3;
-
   stroke-linecap: round;
-
   stroke-dasharray: 2 16;
-
   animation: streamMove 1.4s linear infinite;
 }
 
@@ -646,61 +463,44 @@ h2 {
 
 .flow .node-ring {
   fill: none;
-
   stroke-width: 3;
-
   transform-box: fill-box;
-
   transform-origin: center;
-
   opacity: 0;
-
   animation: ping 10s ease-out infinite;
 }
 
 @keyframes ping {
   0% {
     transform: scale(1);
-
     opacity: 0.7;
   }
 
   9% {
     transform: scale(1.55);
-
     opacity: 0;
   }
 
   100% {
     transform: scale(1.55);
-
     opacity: 0;
   }
 }
 
 .flow .node-label {
   font-family: 'Sora', sans-serif;
-
   font-weight: 800;
-
   font-size: 34px;
-
   letter-spacing: 0.03em;
-
   text-anchor: middle;
-
   fill: var(--ink);
 }
 
 .flow .node-num {
   font-family: 'Sora', sans-serif;
-
   font-weight: 800;
-
   font-size: 34px;
-
   text-anchor: middle;
-
   fill: #fff;
 }
 
@@ -710,19 +510,14 @@ h2 {
 
 .process {
   display: flex;
-
   border-radius: var(--radius);
-
   overflow: hidden;
-
   border: 1px solid var(--line);
 }
 
 .proc-step {
   flex: 1;
-
   padding: 32px 26px;
-
   background: var(--card);
 }
 
@@ -732,47 +527,30 @@ h2 {
 
 .proc-step .idx {
   font-family: 'Sora';
-
   font-weight: 800;
-
   font-size: 13px;
-
   margin-bottom: 14px;
-
   display: inline-block;
-
   width: 30px;
-
   height: 30px;
-
   line-height: 30px;
-
   text-align: center;
-
   border-radius: 50%;
-
   color: #fff;
 }
 
 .proc-step h4 {
   margin: 0 0 8px;
-
   font-size: 16.5px;
-
   font-weight: 700;
-
   font-family: 'Sora';
-
   text-transform: uppercase;
-
   letter-spacing: 0.02em;
 }
 
 .proc-step p {
   margin: 0;
-
   color: var(--muted);
-
   font-size: 14px;
 }
 
@@ -787,22 +565,15 @@ h2 {
 
 .services {
   display: grid;
-
-  grid-template-columns:
-    repeat(6,1fr);
-
+  grid-template-columns: repeat(6,1fr);
   gap: 20px;
 }
 
 .service {
   grid-column: span 2;
-
   background: var(--card);
-
   border: 1px solid var(--line);
-
   border-radius: var(--radius);
-
   padding: 32px 28px;
 }
 
@@ -813,37 +584,25 @@ h2 {
 
 .service .chip {
   width: 44px;
-
   height: 44px;
-
   border-radius: 12px;
-
   margin-bottom: 20px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   font-size: 20px;
 }
 
 .service h3 {
   font-size: 19px;
-
   margin: 0 0 10px;
-
   font-weight: 700;
 }
 
 .service p {
   color: var(--muted);
-
   font-size: 14.5px;
-
   margin: 0;
-
   line-height: 1.65;
 }
 
@@ -854,40 +613,28 @@ h2 {
 
 #clients {
   padding-top: 36px;
-
   padding-bottom: 36px;
 }
 
 .clients-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(4,minmax(0,1fr));
-
+  grid-template-columns: repeat(4,minmax(0,1fr));
   gap: 16px;
 }
 
 .client-card {
   background: var(--card);
-
   border: 1px solid var(--line);
-
   border-radius: var(--radius);
-
   padding: 28px 12px;
-
   text-align: center;
 }
 
 .client-card h3 {
   margin: 0;
-
   font-size: clamp(12px,3.3vw,22px);
-
   font-weight: 700;
-
   letter-spacing: -0.01em;
-
   overflow-wrap: anywhere;
 }
 
@@ -906,65 +653,40 @@ h2 {
 
 .cta-inner {
   border-radius: 28px;
-
   padding: 56px;
-
   background: var(--ink);
-
   color: #fff;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .cta-inner::before {
   content: "";
-
   position: absolute;
-
   width: 360px;
-
   height: 360px;
-
   border-radius: 50%;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--coral),
-      var(--violet)
-    );
-
+  background: linear-gradient(135deg, var(--coral), var(--violet));
   filter: blur(80px);
-
   opacity: 0.55;
-
   top: -120px;
-
   right: -100px;
 }
 
 .cta-grid {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 56px;
-
   position: relative;
 }
 
 .cta-inner h2 {
   color: #fff;
-
   text-transform: uppercase;
 }
 
 .cta-inner .hero-sub {
   color: rgba(255,255,255,0.72);
-
   margin-bottom: 0;
 }
 
@@ -979,40 +701,27 @@ h2 {
 
 .field label {
   display: block;
-
   font-size: 12.5px;
-
   color: rgba(255,255,255,0.65);
-
   margin-bottom: 7px;
 }
 
 .field input,
 .field textarea {
   width: 100%;
-
   background: rgba(255,255,255,0.08);
-
   border: 1px solid rgba(255,255,255,0.18);
-
   color: #fff;
-
   padding: 12px 13px;
-
   font-size: 16px;
-
   border-radius: 10px;
-
   font-family: inherit;
-
   outline: none;
-
   -webkit-appearance: none;
 }
 
 .field textarea {
   resize: vertical;
-
   min-height: 90px;
 }
 
@@ -1024,33 +733,20 @@ h2 {
 .field input:focus,
 .field textarea:focus {
   outline: 2px solid var(--amber);
-
   outline-offset: 1px;
 }
 
 .field-row {
   display: grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
 .cta-inner .btn-primary {
-  background:
-    linear-gradient(
-      135deg,
-      var(--coral),
-      var(--amber)
-    );
-
+  background: linear-gradient(135deg, var(--coral), var(--amber));
   color: var(--ink);
-
   width: 100%;
-
   justify-content: center;
-
   border: none;
 }
 
@@ -1061,40 +757,28 @@ h2 {
 
 footer {
   padding: 56px 0 40px;
-
   border-top: 1px solid var(--line);
 }
 
 .foot-grid {
   display: grid;
-
-  grid-template-columns:
-    1.4fr repeat(2,1fr);
-
+  grid-template-columns: 1.4fr repeat(2,1fr);
   gap: 40px;
-
   margin-bottom: 48px;
 }
 
 .foot-col h5 {
   font-size: 12.5px;
-
   color: var(--muted);
-
   margin: 0 0 14px;
-
   font-weight: 700;
 }
 
 .foot-col a {
   display: block;
-
   color: var(--muted);
-
   font-size: 13.5px;
-
   margin-bottom: 10px;
-
   text-decoration: none;
 }
 
@@ -1102,24 +786,44 @@ footer {
   color: var(--ink);
 }
 
+/* Company name + address (matches footer link styling) */
+.foot-col p.company-name,
+.foot-col p.company-address {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.foot-col p.company-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.foot-col p.company-address svg {
+  flex: none;
+  margin-top: 3px;
+}
+
 .foot-bottom {
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   flex-wrap: wrap;
-
   gap: 14px;
-
   color: var(--muted);
-
   font-size: 12.5px;
-
   padding-top: 24px;
-
   border-top: 1px solid var(--line);
+}
+
+.foot-bottom a {
+  text-decoration: none;
+}
+
+.foot-bottom a:hover {
+  color: var(--ink);
 }
 
 
@@ -1131,7 +835,6 @@ footer {
 
   .hero-grid {
     grid-template-columns: 1fr;
-
     gap: 40px;
   }
 
@@ -1155,7 +858,6 @@ footer {
 
   .cta-grid {
     grid-template-columns: 1fr;
-
     gap: 34px;
   }
 
@@ -1165,8 +867,7 @@ footer {
 @media (max-width: 760px) {
 
   nav {
-    padding:
-      14px 20px;
+    padding: 14px 20px;
   }
 
   .wrap {
@@ -1192,14 +893,11 @@ footer {
 
   .proc-step + .proc-step {
     border-left: none;
-
     border-top: 1px solid var(--line);
   }
 
   .foot-grid {
-    grid-template-columns:
-      1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 
@@ -1233,28 +931,21 @@ footer {
 
   .nav-cta {
     padding: 10px 16px;
-
     font-size: 13px;
   }
 
   .hero {
-    padding:
-      38px 0 36px;
+    padding: 38px 0 36px;
   }
 
   .eyebrow {
     font-size: 11.5px;
-
-    padding:
-      7px 12px;
-
+    padding: 7px 12px;
     line-height: 1.4;
   }
 
   h1 {
-    font-size:
-      clamp(34px,11vw,48px);
-
+    font-size: clamp(34px,11vw,48px);
     margin-bottom: 18px;
   }
 
@@ -1264,13 +955,11 @@ footer {
 
   .hero-note {
     font-size: 14px;
-
     margin-bottom: 26px;
   }
 
   .cta-row {
     flex-direction: column;
-
     width: 100%;
   }
 
@@ -1280,14 +969,11 @@ footer {
 
   .hero-card {
     padding: 18px;
-
     border-radius: 18px;
   }
 
   .channel {
-    padding:
-      14px;
-
+    padding: 14px;
     gap: 11px;
   }
 
@@ -1300,8 +986,7 @@ footer {
   }
 
   section {
-    padding:
-      52px 0;
+    padding: 52px 0;
   }
 
   #approach {
@@ -1314,7 +999,6 @@ footer {
 
   #clients {
     padding-top: 28px;
-
     padding-bottom: 28px;
   }
 
@@ -1327,13 +1011,11 @@ footer {
   }
 
   h2 {
-    font-size:
-      clamp(25px,7vw,32px);
+    font-size: clamp(25px,7vw,32px);
   }
 
   .services {
     grid-template-columns: 1fr;
-
     gap: 14px;
   }
 
@@ -1341,33 +1023,25 @@ footer {
   .service:nth-child(4),
   .service:nth-child(5) {
     grid-column: auto;
-
-    padding:
-      24px 20px;
+    padding: 24px 20px;
   }
 
   .clients-grid {
-    grid-template-columns:
-      repeat(2,minmax(0,1fr));
-
+    grid-template-columns: repeat(2,minmax(0,1fr));
     gap: 8px;
   }
 
   .client-card {
-    padding:
-      20px 6px;
+    padding: 20px 6px;
   }
 
   .cta-inner {
-    padding:
-      32px 20px;
-
+    padding: 32px 20px;
     border-radius: 22px;
   }
 
   .field-row {
     grid-template-columns: 1fr;
-
     gap: 0;
   }
 
@@ -1378,9 +1052,7 @@ footer {
   .field input,
   .field textarea {
     font-size: 16px;
-
-    padding:
-      13px;
+    padding: 13px;
   }
 
   .cta-inner .btn {
@@ -1389,17 +1061,13 @@ footer {
 
   .foot-grid {
     grid-template-columns: 1fr;
-
     gap: 30px;
-
     margin-bottom: 34px;
   }
 
   .foot-bottom {
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 8px;
   }
 
@@ -1413,9 +1081,7 @@ footer {
 @media (max-width: 380px) {
 
   .nav-cta {
-    padding:
-      9px 12px;
-
+    padding: 9px 12px;
     font-size: 12px;
   }
 
@@ -1442,21 +1108,15 @@ footer {
 
   .flow {
     overflow-x: auto;
-
     margin-left: -16px;
-
     margin-right: -16px;
-
     padding-left: 16px;
-
     padding-right: 16px;
-
     -webkit-overflow-scrolling: touch;
   }
 
   .flow svg {
     min-width: 760px;
-
     max-width: none;
   }
 
@@ -1494,9 +1154,7 @@ footer {
 ========================================================= */
 
 :focus-visible {
-  outline:
-    2px solid var(--violet);
-
+  outline: 2px solid var(--violet);
   outline-offset: 2px;
 }
 
@@ -1521,29 +1179,13 @@ footer {
     </div>
 
     <div class="navlinks">
-
-      <a href="#approach">
-        Our approach
-      </a>
-
-      <a href="#services">
-        What we do
-      </a>
-
-      <a href="#clients">
-        Clients
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
+      <a href="#approach">Our approach</a>
+      <a href="#services">What we do</a>
+      <a href="#clients">Clients</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <a
-      href="#contact"
-      class="nav-cta"
-    >
+    <a href="#contact" class="nav-cta">
       Get Started
     </a>
 
@@ -1593,17 +1235,11 @@ footer {
 
       <div class="cta-row">
 
-        <a
-          href="#contact"
-          class="btn btn-primary"
-        >
+        <a href="#contact" class="btn btn-primary">
           Get Started →
         </a>
 
-        <a
-          href="#services"
-          class="btn btn-ghost"
-        >
+        <a href="#services" class="btn btn-ghost">
           What we do
         </a>
 
@@ -1618,73 +1254,28 @@ footer {
         Your growth engine
       </div>
 
-      <div
-        class="channel"
-        style="background:var(--violet);"
-      >
-
-        <div class="ico">
-          🎯
-        </div>
-
+      <div class="channel" style="background:var(--violet);">
+        <div class="ico">🎯</div>
         <div>
-          <strong>
-            Performance Marketing
-          </strong>
-
-          <span>
-            Google, Meta and other digital channels
-          </span>
+          <strong>Performance Marketing</strong>
+          <span>Google, Meta and other digital channels</span>
         </div>
-
       </div>
 
-
-      <div
-        class="channel"
-        style="background:var(--coral);"
-      >
-
-        <div class="ico">
-          🧲
-        </div>
-
+      <div class="channel" style="background:var(--coral);">
+        <div class="ico">🧲</div>
         <div>
-
-          <strong>
-            Lead Generation
-          </strong>
-
-          <span>
-            A consistent pipeline of qualified prospects
-          </span>
-
+          <strong>Lead Generation</strong>
+          <span>A consistent pipeline of qualified prospects</span>
         </div>
-
       </div>
 
-
-      <div
-        class="channel"
-        style="background:var(--teal);"
-      >
-
-        <div class="ico">
-          💬
-        </div>
-
+      <div class="channel" style="background:var(--teal);">
+        <div class="ico">💬</div>
         <div>
-
-          <strong>
-            WhatsApp Marketing
-          </strong>
-
-          <span>
-            Personalized campaigns and customer journeys
-          </span>
-
+          <strong>WhatsApp Marketing</strong>
+          <span>Personalized campaigns and customer journeys</span>
         </div>
-
       </div>
 
     </div>
@@ -1734,222 +1325,55 @@ footer {
       >
 
         <defs>
-
-          <linearGradient
-            id="flowGrad"
-            x1="0"
-            y1="0"
-            x2="1"
-            y2="0"
-          >
-
-            <stop
-              offset="0%"
-              stop-color="#ff5a36"
-            />
-
-            <stop
-              offset="35%"
-              stop-color="#7c3aed"
-            />
-
-            <stop
-              offset="70%"
-              stop-color="#ffb627"
-            />
-
-            <stop
-              offset="100%"
-              stop-color="#0aa89e"
-            />
-
+          <linearGradient id="flowGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ff5a36"/>
+            <stop offset="35%" stop-color="#7c3aed"/>
+            <stop offset="70%" stop-color="#ffb627"/>
+            <stop offset="100%" stop-color="#0aa89e"/>
           </linearGradient>
-
         </defs>
-
 
         <path
           id="loopPath"
           class="track"
-          d="
-            M110,120
-            L890,120
-            A70,70 0 0 1 890,260
-            L110,260
-            A70,70 0 0 1 110,120
-            Z
-          "
+          d="M110,120 L890,120 A70,70 0 0 1 890,260 L110,260 A70,70 0 0 1 110,120 Z"
         />
 
         <path
           class="stream"
-          d="
-            M110,120
-            L890,120
-            A70,70 0 0 1 890,260
-            L110,260
-            A70,70 0 0 1 110,120
-            Z
-          "
+          d="M110,120 L890,120 A70,70 0 0 1 890,260 L110,260 A70,70 0 0 1 110,120 Z"
         />
-
 
         <g>
 
-          <circle
-            class="node-ring"
-            cx="110"
-            cy="120"
-            r="46"
-            stroke="#ff5a36"
-            style="animation-delay:0s"
-          />
+          <circle class="node-ring" cx="110" cy="120" r="46" stroke="#ff5a36" style="animation-delay:0s"/>
+          <circle class="node-ring" cx="370" cy="120" r="46" stroke="#7c3aed" style="animation-delay:1.3s"/>
+          <circle class="node-ring" cx="630" cy="120" r="46" stroke="#ffb627" style="animation-delay:2.6s"/>
+          <circle class="node-ring" cx="890" cy="120" r="46" stroke="#0aa89e" style="animation-delay:3.9s"/>
 
-          <circle
-            class="node-ring"
-            cx="370"
-            cy="120"
-            r="46"
-            stroke="#7c3aed"
-            style="animation-delay:1.3s"
-          />
+          <circle cx="110" cy="120" r="46" fill="#ff5a36"/>
+          <circle cx="370" cy="120" r="46" fill="#7c3aed"/>
+          <circle cx="630" cy="120" r="46" fill="#ffb627"/>
+          <circle cx="890" cy="120" r="46" fill="#0aa89e"/>
 
-          <circle
-            class="node-ring"
-            cx="630"
-            cy="120"
-            r="46"
-            stroke="#ffb627"
-            style="animation-delay:2.6s"
-          />
+          <text class="node-num" x="110" y="132">1</text>
+          <text class="node-num" x="370" y="132">2</text>
+          <text class="node-num" x="630" y="132" style="fill:#1a1523">3</text>
+          <text class="node-num" x="890" y="132">4</text>
 
-          <circle
-            class="node-ring"
-            cx="890"
-            cy="120"
-            r="46"
-            stroke="#0aa89e"
-            style="animation-delay:3.9s"
-          />
-
-
-          <circle
-            cx="110"
-            cy="120"
-            r="46"
-            fill="#ff5a36"
-          />
-
-          <circle
-            cx="370"
-            cy="120"
-            r="46"
-            fill="#7c3aed"
-          />
-
-          <circle
-            cx="630"
-            cy="120"
-            r="46"
-            fill="#ffb627"
-          />
-
-          <circle
-            cx="890"
-            cy="120"
-            r="46"
-            fill="#0aa89e"
-          />
-
-
-          <text
-            class="node-num"
-            x="110"
-            y="132"
-          >
-            1
-          </text>
-
-          <text
-            class="node-num"
-            x="370"
-            y="132"
-          >
-            2
-          </text>
-
-          <text
-            class="node-num"
-            x="630"
-            y="132"
-            style="fill:#1a1523"
-          >
-            3
-          </text>
-
-          <text
-            class="node-num"
-            x="890"
-            y="132"
-          >
-            4
-          </text>
-
-
-          <text
-            class="node-label"
-            x="110"
-            y="52"
-          >
-            REACH
-          </text>
-
-          <text
-            class="node-label"
-            x="370"
-            y="52"
-          >
-            ENGAGE
-          </text>
-
-          <text
-            class="node-label"
-            x="630"
-            y="52"
-          >
-            CONVERT
-          </text>
-
-          <text
-            class="node-label"
-            x="890"
-            y="52"
-          >
-            RETAIN
-          </text>
+          <text class="node-label" x="110" y="52">REACH</text>
+          <text class="node-label" x="370" y="52">ENGAGE</text>
+          <text class="node-label" x="630" y="52">CONVERT</text>
+          <text class="node-label" x="890" y="52">RETAIN</text>
 
         </g>
 
-
         <g class="travel">
-
-          <circle
-            class="dot-lead"
-            r="9"
-          >
-
-            <animateMotion
-              dur="10s"
-              repeatCount="indefinite"
-              rotate="auto"
-            >
-
+          <circle class="dot-lead" r="9">
+            <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
               <mpath href="#loopPath"/>
-
             </animateMotion>
-
           </circle>
-
         </g>
 
       </svg>
@@ -1959,91 +1383,40 @@ footer {
 
     <div class="process">
 
-
       <div class="proc-step">
-
-        <div
-          class="idx"
-          style="background:var(--coral);"
-        >
-          1
-        </div>
-
-        <h4>
-          Reach
-        </h4>
-
+        <div class="idx" style="background:var(--coral);">1</div>
+        <h4>Reach</h4>
         <p>
           Attract the right customers with high-intent
           campaigns across Google, Meta and other channels.
         </p>
-
       </div>
 
-
       <div class="proc-step">
-
-        <div
-          class="idx"
-          style="background:var(--violet);"
-        >
-          2
-        </div>
-
-        <h4>
-          Engage
-        </h4>
-
+        <div class="idx" style="background:var(--violet);">2</div>
+        <h4>Engage</h4>
         <p>
           Start the conversation with personalized
           WhatsApp campaigns and targeted customer journeys.
         </p>
-
       </div>
 
-
       <div class="proc-step">
-
-        <div
-          class="idx"
-          style="
-            background:var(--amber);
-            color:var(--ink);
-          "
-        >
-          3
-        </div>
-
-        <h4>
-          Convert
-        </h4>
-
+        <div class="idx" style="background:var(--amber); color:var(--ink);">3</div>
+        <h4>Convert</h4>
         <p>
           Turn qualified leads into revenue with optimized
           landing pages and conversion-focused strategies.
         </p>
-
       </div>
 
-
       <div class="proc-step">
-
-        <div
-          class="idx"
-          style="background:var(--teal);"
-        >
-          4
-        </div>
-
-        <h4>
-          Retain
-        </h4>
-
+        <div class="idx" style="background:var(--teal);">4</div>
+        <h4>Retain</h4>
         <p>
           Keep customers coming back through retargeting
           and automated follow-ups.
         </p>
-
       </div>
 
     </div>
@@ -2076,114 +1449,54 @@ footer {
 
     <div class="services">
 
-
       <div class="service">
-
-        <div
-          class="chip"
-          style="background:rgba(124,58,237,0.12);"
-        >
-          🎯
-        </div>
-
-        <h3>
-          Performance Marketing
-        </h3>
-
+        <div class="chip" style="background:rgba(124,58,237,0.12);">🎯</div>
+        <h3>Performance Marketing</h3>
         <p>
           High-intent campaigns across Google, Meta and
           other digital channels focused on generating
           leads, conversions and measurable ROI.
         </p>
-
       </div>
 
-
       <div class="service">
-
-        <div
-          class="chip"
-          style="background:rgba(255,90,54,0.12);"
-        >
-          🧲
-        </div>
-
-        <h3>
-          Lead Generation
-        </h3>
-
+        <div class="chip" style="background:rgba(255,90,54,0.12);">🧲</div>
+        <h3>Lead Generation</h3>
         <p>
           Generate a consistent pipeline of qualified
           prospects through targeted campaigns, optimized
           landing pages and conversion-focused strategies.
         </p>
-
       </div>
 
-
       <div class="service">
-
-        <div
-          class="chip"
-          style="background:rgba(10,168,158,0.12);"
-        >
-          💬
-        </div>
-
-        <h3>
-          WhatsApp Marketing
-        </h3>
-
+        <div class="chip" style="background:rgba(10,168,158,0.12);">💬</div>
+        <h3>WhatsApp Marketing</h3>
         <p>
           Engage and convert customers through personalized
           WhatsApp campaigns, automated communication and
           targeted customer journeys.
         </p>
-
       </div>
 
-
       <div class="service">
-
-        <div
-          class="chip"
-          style="background:rgba(255,182,39,0.2);"
-        >
-          🔁
-        </div>
-
-        <h3>
-          Customer Retargeting
-        </h3>
-
+        <div class="chip" style="background:rgba(255,182,39,0.2);">🔁</div>
+        <h3>Customer Retargeting</h3>
         <p>
           Reconnect with prospects and existing customers
           through strategic remarketing campaigns designed
           to drive repeat engagement and conversions.
         </p>
-
       </div>
 
-
       <div class="service">
-
-        <div
-          class="chip"
-          style="background:rgba(124,58,237,0.12);"
-        >
-          ⚙️
-        </div>
-
-        <h3>
-          Marketing Automation
-        </h3>
-
+        <div class="chip" style="background:rgba(124,58,237,0.12);">⚙️</div>
+        <h3>Marketing Automation</h3>
         <p>
           Automate customer communication and follow-ups
           to improve lead nurturing, conversions and
           customer retention.
         </p>
-
       </div>
 
     </div>
@@ -2221,29 +1534,10 @@ footer {
 
     <div class="clients-grid">
 
-      <div class="client-card">
-        <h3>
-          Gromo
-        </h3>
-      </div>
-
-      <div class="client-card">
-        <h3>
-          Brightloans
-        </h3>
-      </div>
-
-      <div class="client-card">
-        <h3>
-          Clickpe
-        </h3>
-      </div>
-
-      <div class="client-card">
-        <h3>
-          Digicredit
-        </h3>
-      </div>
+      <div class="client-card"><h3>Gromo</h3></div>
+      <div class="client-card"><h3>Brightloans</h3></div>
+      <div class="client-card"><h3>Clickpe</h3></div>
+      <div class="client-card"><h3>Digicredit</h3></div>
 
     </div>
 
@@ -2256,10 +1550,7 @@ footer {
      CONTACT
 ======================================================= -->
 
-<section
-  id="contact"
-  class="cta-section"
->
+<section id="contact" class="cta-section">
 
   <div class="wrap">
 
@@ -2270,10 +1561,7 @@ footer {
 
         <div>
 
-          <p
-            class="kicker"
-            style="color:var(--amber);"
-          >
+          <p class="kicker" style="color:var(--amber);">
             Get in touch
           </p>
 
@@ -2289,9 +1577,7 @@ footer {
         </div>
 
 
-        <!-- =================================================
-             CONTACT FORM
-        ================================================== -->
+        <!-- CONTACT FORM -->
 
         <form
           id="contactForm"
@@ -2303,11 +1589,7 @@ footer {
           <div class="field-row">
 
             <div class="field">
-
-              <label for="fname">
-                Full name
-              </label>
-
+              <label for="fname">Full name</label>
               <input
                 id="fname"
                 name="name"
@@ -2315,16 +1597,10 @@ footer {
                 autocomplete="name"
                 required
               >
-
             </div>
 
-
             <div class="field">
-
-              <label for="fcompany">
-                Company
-              </label>
-
+              <label for="fcompany">Company</label>
               <input
                 id="fcompany"
                 name="company"
@@ -2332,7 +1608,6 @@ footer {
                 autocomplete="organization"
                 required
               >
-
             </div>
 
           </div>
@@ -2341,11 +1616,7 @@ footer {
           <div class="field-row">
 
             <div class="field">
-
-              <label for="femail">
-                Work email
-              </label>
-
+              <label for="femail">Work email</label>
               <input
                 id="femail"
                 name="email"
@@ -2353,16 +1624,10 @@ footer {
                 autocomplete="email"
                 required
               >
-
             </div>
 
-
             <div class="field">
-
-              <label for="fphone">
-                Phone / WhatsApp
-              </label>
-
+              <label for="fphone">Phone / WhatsApp</label>
               <input
                 id="fphone"
                 name="phone"
@@ -2370,46 +1635,27 @@ footer {
                 autocomplete="tel"
                 inputmode="tel"
               >
-
             </div>
 
           </div>
 
 
           <div class="field">
-
-            <label for="fmsg">
-              What are you trying to grow?
-            </label>
-
+            <label for="fmsg">What are you trying to grow?</label>
             <textarea
               id="fmsg"
               name="message"
               rows="3"
             ></textarea>
-
           </div>
 
 
-          <!--
-            Hidden honeypot.
-            Normal visitors never see this.
-            Bots often fill it automatically.
-          -->
-
+          <!-- Hidden honeypot. Normal visitors never see this. Bots often fill it. -->
           <div
-            style="
-              display:none;
-              position:absolute;
-              left:-9999px;
-            "
+            style="display:none; position:absolute; left:-9999px;"
             aria-hidden="true"
           >
-
-            <label for="website">
-              Website
-            </label>
-
+            <label for="website">Website</label>
             <input
               id="website"
               name="website"
@@ -2417,7 +1663,6 @@ footer {
               tabindex="-1"
               autocomplete="off"
             >
-
           </div>
 
 
@@ -2434,11 +1679,7 @@ footer {
             id="formStatus"
             role="status"
             aria-live="polite"
-            style="
-              display:none;
-              font-size:13px;
-              margin-top:12px;
-            "
+            style="display:none; font-size:13px; margin-top:12px;"
           ></p>
 
         </form>
@@ -2465,25 +1706,12 @@ footer {
 
       <div class="foot-col">
 
-        <div
-          class="logo"
-          style="margin-bottom:14px;"
-        >
-
+        <div class="logo" style="margin-bottom:14px;">
           <span class="logo-mark"></span>
-
           DigiStar
-
         </div>
 
-        <p
-          style="
-            color:var(--muted);
-            font-size:13.5px;
-            max-width:34ch;
-            margin:0;
-          "
-        >
+        <p style="color:var(--muted); font-size:13.5px; max-width:34ch; margin:0;">
           Grow faster. Convert more.
         </p>
 
@@ -2492,56 +1720,39 @@ footer {
 
       <div class="foot-col">
 
-        <h5>
-          What we do
-        </h5>
+        <h5>What we do</h5>
 
-        <a href="#services">
-          Performance Marketing
-        </a>
-
-        <a href="#services">
-          Lead Generation
-        </a>
-
-        <a href="#services">
-          WhatsApp Marketing
-        </a>
-
-        <a href="#services">
-          Customer Retargeting
-        </a>
-
-        <a href="#services">
-          Marketing Automation
-        </a>
+        <a href="#services">Performance Marketing</a>
+        <a href="#services">Lead Generation</a>
+        <a href="#services">WhatsApp Marketing</a>
+        <a href="#services">Customer Retargeting</a>
+        <a href="#services">Marketing Automation</a>
 
       </div>
 
 
       <div class="foot-col">
 
-        <h5>
-          Contact
-        </h5>
+        <h5>Contact</h5>
 
         <a href="mailto:contact@digistar.in">
           contact@digistar.in
         </a>
-      <p class="company-name">
-  M-incognito Resources LLP
-</p>
 
-<p class="company-address">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-       fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-       stroke-linejoin="round" aria-hidden="true"
-       style="vertical-align: -2px; margin-right: 6px;">
-    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path>
-    <circle cx="12" cy="10" r="3"></circle>
-  </svg>
-  Chitrakoot Apartments, Pitampura, Delhi
-</p>
+        <p class="company-name">
+          M-incognito Resources LLP
+        </p>
+
+        <p class="company-address">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span>Chitrakoot Apartments, Pitampura, Delhi</span>
+        </p>
+
       </div>
 
     </div>
@@ -2554,6 +1765,8 @@ footer {
       </span>
 
       <span>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        &nbsp;·&nbsp;
         Grow faster. Convert more.
       </span>
 
@@ -2570,159 +1783,77 @@ footer {
 
 <script>
 
-const contactForm =
-  document.getElementById("contactForm");
-
-const submitButton =
-  document.getElementById("submitButton");
-
-const formStatus =
-  document.getElementById("formStatus");
+const contactForm = document.getElementById("contactForm");
+const submitButton = document.getElementById("submitButton");
+const formStatus = document.getElementById("formStatus");
 
 
-contactForm.addEventListener(
-  "submit",
-  async function(event) {
+contactForm.addEventListener("submit", async function(event) {
 
-    event.preventDefault();
+  event.preventDefault();
 
+  // Browser validation
+  if (!contactForm.checkValidity()) {
+    contactForm.reportValidity();
+    return;
+  }
 
-    /*
-     * Browser validation
-     */
+  // Disable button while sending
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+  formStatus.style.display = "none";
 
-    if (!contactForm.checkValidity()) {
+  try {
 
-      contactForm.reportValidity();
+    const response = await fetch("send-mail.php", {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { "Accept": "application/json" }
+    });
 
-      return;
-    }
-
-
-    /*
-     * Disable button while sending
-     */
-
-    submitButton.disabled = true;
-
-    submitButton.textContent = "Sending...";
-
-    formStatus.style.display = "none";
-
+    // Try to read JSON response
+    let result;
 
     try {
-
-      const response =
-        await fetch(
-          "send-mail.php",
-          {
-            method: "POST",
-
-            body:
-              new FormData(contactForm),
-
-            headers: {
-              "Accept":
-                "application/json"
-            }
-          }
-        );
-
-
-      /*
-       * Try to read JSON response.
-       */
-
-      let result;
-
-      try {
-
-        result =
-          await response.json();
-
-      } catch (jsonError) {
-
-        throw new Error(
-          "Invalid server response"
-        );
-
-      }
-
-
-      if (
-        response.ok &&
-        result.success
-      ) {
-
-        formStatus.textContent =
-          "Thank you! Your message has been sent. We'll get back to you shortly.";
-
-        formStatus.style.color =
-          "var(--amber)";
-
-        formStatus.style.display =
-          "block";
-
-
-        contactForm.reset();
-
-
-        /*
-         * Keep success message visible.
-         */
-
-        setTimeout(
-          function() {
-
-            formStatus.style.display =
-              "none";
-
-          },
-          8000
-        );
-
-
-      } else {
-
-        throw new Error(
-          result.message ||
-          "Unable to send message."
-        );
-
-      }
-
-
-    } catch (error) {
-
-      console.error(
-        "Contact form error:",
-        error
-      );
-
-
-      formStatus.textContent =
-        " ";
-
-      formStatus.style.color =
-        "#ff7b6b";
-
-      formStatus.style.display =
-        "block";
-
+      result = await response.json();
+    } catch (jsonError) {
+      throw new Error("Invalid server response");
     }
 
+    if (response.ok && result.success) {
 
-    /*
-     * Re-enable button
-     */
+      formStatus.textContent =
+        "Thank you! Your message has been sent. We'll get back to you shortly.";
+      formStatus.style.color = "var(--amber)";
+      formStatus.style.display = "block";
 
-    submitButton.disabled = false;
+      contactForm.reset();
 
-    submitButton.textContent =
-      "Get Started →";
+      // Hide success message after a while
+      setTimeout(function() {
+        formStatus.style.display = "none";
+      }, 8000);
+
+    } else {
+      throw new Error(result.message || "Unable to send message.");
+    }
+
+  } catch (error) {
+
+    console.error("Contact form error:", error);
+
+    formStatus.textContent =
+      " ";
+    formStatus.style.color = "#ff7b6b";
+    formStatus.style.display = "block";
 
   }
-);
+
+  // Re-enable button
+  submitButton.disabled = false;
+  submitButton.textContent = "Get Started →";
+
+});
 
 </script>
 
